@@ -23,3 +23,15 @@ sql_produtos = '''
     Qtde_Estoque SMALLINT NOT NULL
     );
 '''
+
+sql_vendas = '''
+    CREATE TABLE IF NOT EXISTS Venda (
+    ID_Transacao INTEGER PRIMARY KEY AUTOINCREMENT,
+    Nota_Fiscal SMALLINT NOT NULL,
+    ID_Cliente INTEGER NOT NULL,
+    Data_Compra DATETIME,
+    ID_Produto INTEGER NOT NULL,
+    Quantidade SMALLINT NOT NULL,
+    FOREIGN KEY (ID_Cliente) REFERENCES Cliente(ID_Cliente),
+    FOREIGN KEY (ID_Produto) REFERENCES Produto(ID_Produto))
+'''
