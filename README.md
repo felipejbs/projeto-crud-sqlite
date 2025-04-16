@@ -51,4 +51,4 @@ Registra as vendas realizadas.
 2. Execute o script com o seguinte comando:
 
 ```bash
-python nome_do_arquivo.py
+python main.py
